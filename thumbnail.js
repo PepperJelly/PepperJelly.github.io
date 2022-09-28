@@ -4,10 +4,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     targetImage.addEventListener("click", function () {
         if (targetImage.classList.contains("small")) {
             targetImage.classList.remove("small");
-            alert("图片被放大了");
         } else {
             targetImage.classList.add("small");
-            alert("图片被缩小了");
         }
     });
 });
