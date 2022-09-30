@@ -1,39 +1,259 @@
 <!DOCTYPE html>
-
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title>我的个人网站</title>
-    <link href="https://www.adalab.cn/admission.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="thumbnail.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./index.js"></script>
+    <!-- 脚本文件 -->
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <!-- 样式文件 -->
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css" />
 </head>
 
 <body>
-    <header><img src="https://www.adalab.cn/images/adalab.png"></header>
-    <main>
-        <aside>
-            <ul>
-                <a href="./bilibili.html">前往视频页</a>
-            </ul>
-        </aside>
-        <article>
-            <h1>Hello Adalab</h1>
-            <h2>this is h2 tag</h2>
-            <h3>this is h3 tag</h3>
-            <p>This is the first page I made at Adalab.</p>
-            <p>
-                这是为<a href="https://www.adalab.cn"><img src="https://www.adalab.cn/images/adalab.png"></a>挑战赛制作的网站。
-            </p>
-            <img src="./imgs/wallhaven-dppkdl.png" title="点击试试" class="small" id="smart-image">
-        </article>
-    </main>
-    <footer>
-        by
-        <a href="https://www.zhihu.com/people/la-jiao-guo-dong-12" target="_blank">PepperJelly</a>
-        for <a href="https://www.adalab.cn" target="_blank">Adalab</a>
-    </footer>
+    <div class="main-wrapper" id="top">
+        <header>
+            <div class="head">
+                <div class="header-logo">
+                    <img src="./imgs/logo.png" title="辣辣果冻" alt="">
+                    <div>PepperJelly的科普站</div>
+                </div>
+                <div class="header-wrapper">
+                    <a class="text-bar active">
+                        <span class="text">主页</span>
+                    </a>
+                    <a class="text-bar">
+                        <span class="text">文章</span>
+                    </a>
+                    <a class="text-bar">
+                        <span class="text">视频</span>
+                    </a>
+                    <a class="text-bar">
+                        <span class="text">Q&A</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="leftIndex">
+            <a class="leftText leftActive" id="chapter-index">主页</a>
+            <a class="leftText" id="chapter-doc">文章</a>
+            <a class="leftText-chapter" href="#chapter1">简介</a>
+            <a class="leftText-chapter" href="#chapter2">发展历史</a>
+            <a class="leftText-chapter" href="#chapter3">工作原理</a>
+            <a class="leftText-chapter" href="#chapter4">核心部分</a>
+            <a class="leftText-chapter" href="#chapter5">分类</a>
+            <a class="leftText-chapter" href="#chapter6">与GPU比较</a>
+            <a class="leftText" id="chapter-video">科普视频</a>
+            <a class="leftText-chapter" href="#">"硬件茶谈"的视频科普</a>
+            <a class="leftText" id="chapter-QA">Q&A</a>
+        </div>
+
+        <main>
+            <div class="main-left">
+                <div class="main-bar mainIndex">
+                    <h1>
+                        <img src="https://www.adalab.cn/images/adalab.png"><br><br>
+                        这是为<a href="https://www.adalab.cn" style="text-decoration: underline; color: darkred;"
+                            target="_blank">Adalab</a>挑战赛制作的网站。
+                    </h1>
+                    <p>本站的主要内容是科普 "中央处理器(central processing unit)" 的构成及其运作原理。</p>
+                    <p>顶部的导航栏可以跳转各个页面。</p>
+                    <p>左侧的目录栏可以知道当前所处的页面，点击可以跳转至章节开始处。</p>
+                    <p>右边就是网站作者"我"的信息啦→</p>
+                    <p>站内内容均来自于网络，如有侵权，请联系本人立即删除。</p>
+                </div>
+
+                <div class="main-bar mainDoc pageOff">
+                    <h1>CPU / 中央处理器（central processing unit）</h1>
+                    <p>（本文章摘抄自百度百科"CPU"词条）</p>
+                    <p>
+                        &emsp;<a href="https://baike.baidu.com/item/%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8"
+                            target="_blank">[点击跳转至该词条]</a>
+                    </p>
+                    <a name="chapter1" class="target-fix"></a>
+                    <h1>简介</h1>
+                    <p>
+                        &emsp;&emsp;中央处理器（CPU），是电子计算机的主要设备之一，电脑中的核心配件。其功能主要是解释计算机指令以及处理计算机软件中的数据。CPU是计算机中负责读取指令，对指令译码并执行指令的核心部件。<br>
+                        &emsp;&emsp;中央处理器主要包括两个部分，即控制器、运算器，其中还包括高速缓冲存储器及实现它们之间联系的数据、控制的总线。<br>
+                        &emsp;&emsp;电子计算机三大核心部件就是CPU、内部存储器、输入/输出设备。中央处理器的功效主要为处理指令、执行操作、控制时间、处理数据。<br>
+                        &emsp;&emsp;在计算机体系结构中，CPU 是对计算机的所有硬件资源（如存储器、输入输出单元） 进行控制调配、执行通用运算的核心硬件单元。<br>
+                        &emsp;&emsp;CPU是计算机的运算和控制核心。计算机系统中所有软件层的操作，最终都将通过指令集映射为CPU的操作。
+                    </p>
+                    <a name="chapter2" class="target-fix"></a>
+                    <h1>发展历史</h1>
+                    <p>
+                        &emsp;&emsp;CPU出现于大规模集成电路时代，处理器架构设计的迭代更新以及集成电路工艺的不断提升促使其不断发展完善。从最初专用于数学计算到广泛应用于通用计算，从4位到8位、16位、32位处理器，最后到64位处理器，从各厂商互不兼容到不同指令集架构规范的出现，CPU自诞生以来一直在飞速发展。<br>
+                        &emsp;&emsp;CPU发展已经有40多年的历史了。我们通常将其分成六个阶段。<br>
+                        &emsp;&emsp;(1)第一阶段(1971年-1973年)。这是4位和8位低档微处理器时代，代表产品是Intel
+                        4004处理器。1971年，Intel生产的4004微处理器将运算器和控制器集成在一个芯片上，标志着CPU的诞生；
+                        1978年，8086处理器的出现奠定了X86指令集架构，随后8086系列处理器被广泛应用于个人计算机终端、高性能服务器以及云服务器中。<br>
+                        &emsp;&emsp;(2)第二阶段(1974年-1977年)。这是8位中高档微处理器时代，代表产品是Intel 8080。此时指令系统已经比较完善了。<br>
+                        &emsp;&emsp;(3)第三阶段(1978年-1984年)。这是16位微处理器的时代，代表产品是Intel 8086。相对而言已经比较成熟了。<br>
+                        &emsp;&emsp;(4)第四阶段(1985年-1992年)。这是32位微处理器时代，代表产品是Intel 80386。已经可以胜任多任务、多用户的作业。1989
+                        年发布的80486处理器实现了5级标量流水线，标志着CPU的初步成熟，也标志着传统处理器发展阶段的结束。<br>
+                        &emsp;&emsp;(5)第五阶段(1993年-2005年)。这是奔腾系列微处理器的时代。1995
+                        年11月，Intel发布了Pentium处理器，该处理器首次采用超标量指令流水结构，引入了指令的乱序执行和分支预测技术，大大提高了处理器的性能，因此，超标量指令流水线结构一直被后续出现的现代处理器，如AMD（AdvancedMicro
+                        devices）的锐龙、Intel的酷睿系列等所采用。<br>
+                        &emsp;&emsp;(6)第六阶段(2005年至2021年)。处理器逐渐向更多核心，更高并行度发展。典型的代表有英特尔的酷睿系列处理器和AMD的锐龙系列处理器。为了满足操作系统的上层工作需求，现代处理器进一步引入了诸如并行化、多核化、虚拟化以及远程管理系统等功能，不断推动着上层信息系统向前发展。<br>
+                    </p>
+                    <a name="chapter3" class="target-fix"></a>
+                    <h1>工作原理</h1>
+                    <p>
+                        &emsp;&emsp;冯诺依曼体系结构是现代计算机的基础。在该体系结构下，程序和数据统一存储，指令和数据需要从同一存储空间存取，经由同一总线传输，无法重叠执行。根据冯诺依曼体系，CPU的工作分为以下
+                        5 个阶段：取指令阶段、指令译码阶段、执行指令阶段、访存取数和结果写回。<br>
+                        &emsp;&emsp;取指令（IF，instruction fetch），即将一条指令从主存储器中取到指令寄存器的过程。程序计数器中的数值，用来指示当前指令在主存中的位置。当
+                        一条指令被取出后，程序计数器（PC）中的数值将根据指令字长度自动递增。<br>
+                        &emsp;&emsp;指令译码阶段（ID，instruction decode），取出指令后，指令译码器按照预定的指令格式，对取回的指令进行拆分和解释，识别区分出不同的指令类
+                        别以及各种获取操作数的方法。现代CISC处理器会将拆分已提高并行率和效率。<br>
+                        &emsp;&emsp;执行指令阶段（EX，execute），具体实现指令的功能。CPU的不同部分被连接起来，以执行所需的操作。<br>
+                        &emsp;&emsp;访存取数阶段（MEM，memory），根据指令需要访问主存、读取操作数，CPU得到操作数在主存中的地址，并从主存中读取该操作数用于运算。部分指令不需要访问主存，则可以跳过该阶段。<br>
+                        &emsp;&emsp;结果写回阶段（WB，write
+                        back），作为最后一个阶段，结果写回阶段把执行指令阶段的运行结果数据“写回”到某种存储形式。结果数据一般会被写到CPU的内部寄存器中，以便被后续的指令快速地存取；许多指令还会改变程序状态字寄存器中标志位的状态，这些标志位标识着不同的操作结果，可被用来影响程序的动作。<br>
+                        &emsp;&emsp;在指令执行完毕、结果数据写回之后，若无意外事件（如结果溢出等）发生，计算机就从程序计数器中取得下一条指令地址，开始新一轮的循环，下一个指令周期将顺序取出下一条指令。许多复杂的CPU可以一次提取多个指令、解码，并且同时执行。<br>
+                    </p>
+                    <a name="chapter4" class="target-fix"></a>
+                    <h1>核心部分</h1>
+                    <h4>运算器</h4>
+                    <p>
+                        &emsp;&emsp;运算器是指计算机中进行各种算术和逻辑运算操作的部件， 其中算术逻辑单元是中央处理核心的部分。<br>
+                        &emsp;&emsp;（1）算术逻辑单元（ALU）。算术逻辑单元是指能实现多组
+                        算术运算与逻辑运算的组合逻辑电路，其是中央处理中的重要组成部分。算术逻辑单元的运算主要是进行二位元算术运算，如加法、减法、乘法。在运算过程中，算术逻辑单元主要是以计算机指令集中执行算术与逻辑操作，通常来说，ALU能够发挥直接读入读出的作用，具体体现在处理器控制器、内存及输入输出设备等方面，输入输出是建立在总线的基础上实施。输入指令包含一
+                        个指令字，其中包括操作码、格式码等。<br>
+                        &emsp;&emsp;（2）中间寄存器（IR）。其长度为 128 位，其通过操作数来决定实际长度。IR
+                        在“进栈并取数”指令中发挥重要作用，在执行该指令过程中，将ACC的内容发送于IR，之后将操作数取到ACC，后将IR内容进栈。<br>
+                        &emsp;&emsp;（3）运算累加器（ACC）。当前的寄存器一般都是单累加器，其长度为128位。对于ACC来说，可以将它看成可变长的累加器。在叙述指令过程中，ACC长度的表示一般都是将ACS的值作为依据，而ACS长度与
+                        ACC 长度有着直接联系，ACS长度的加倍或减半也可以看作ACC长度加倍或减半。<br>
+                        &emsp;&emsp;（4）描述字寄存器（DR）。其主要应用于存放与修改描述字中。DR的长度为64位，为了简化数据结构处理，使用描述字发挥重要作用。<br>
+                        &emsp;&emsp;（5）B寄存器。其在指令的修改中发挥重要作用，B 寄存器长度为32位，在修改地址过程中能保存地址修改量，主存地址只能用描述字进行修改。指向数组中的第一个元素就是描述字，
+                        因此，访问数组中的其它元素应当需要用修改量。对于数组成来说，其是由大小一样的数据或者大小相同的元素组成的，且连续存储，常见的访问方式为向量描述字，因为向量描述字中的地址为字节地址，所以，在进行换算过程中，首先应当进行基本地址
+                        的相加。对于换算工作来说，主要是由硬件自动实现，在这个过程中尤其要注意对齐，以免越出数组界限。<br>
+                    </p>
+                    <h4>控制器</h4>
+                    <p>
+                        &emsp;&emsp;控制器是指按照预定顺序改变主电路或控制电路的接线和 改变电路中电阻值来控制电动机的启动、调速、制动与反向的主令装置。控制器由程序状态寄存器PSR，系统状态寄存器SSR，
+                        程序计数器PC，指令寄存器等组成，其作为“决策机构”，主要任务就是发布命令，发挥着整个计算机系统操作的协调与指挥作用。
+                        控制的分类主要包括两种，分别为组合逻辑控制器、微程序控制器，两个部分都有各自的优点与不足。其中组合逻辑控制器结构相对较复杂，但优点是速度较快；微程序控制器设计的结构简单，但在修改一条机器指令功能中，需对微程序的全部重编。<br>
+                    </p>
+                    <a name="chapter5" class="target-fix"></a>
+                    <h1>分类</h1>
+                    <h4>指令集的方式</h4>
+                    <p>
+                        &emsp;&emsp;CPU的分类还可以按照指令集的方式将其分为精简指令集计算机(RISC)和复杂指令集计算机(CISC)。RISC指令长度和执行时间恒定，CISC指令长度和执行时间不一定。
+                        RISC
+                        指令的并行的执行程度更好，并且编译器的效率也较高。CISC指令则对不同的任务有着更好的优化，代价是电路复杂且较难提高并行度。典型的CISC指令集有x86微架构，典型的RISC指令集有ARM微架构。但在现代处理器架构中RISC和CISC指令均会在译码环节进行转换，拆分成CPU内部的类RISC指令。
+                    </p>
+                    <h4>嵌入式系统CPU</h4>
+                    <p>
+                        &emsp;&emsp;传统的嵌入式领域所指范畴非常广泛，是处理器除了服务器和PC领域之外的主要应用领域。所谓“嵌入式”是指在很多芯片中，其所包含的处理器就像嵌入在里面不为人知一样。<br>
+                        &emsp;&emsp;近年来随着各种新技术新领域的进一步发展，嵌入式领域本身也被发展成了几个不同的子领域而产生了分化。<br>
+                        &emsp;&emsp;首先是随着智能手机(Mobile Smart Phone)和手持设备(Mobile
+                        Device)的发展，移动(Mobile)领域逐渐发展成了规模匹敌甚至超过PC领域的一个独立领域。由于Mobile领域的处理器需要加载Linux操作系统，同时涉及复杂的软件生态，因此，其具有和PC领域一样对软件生态的严重依赖。<br>
+                        &emsp;&emsp;其次是实时(Real
+                        Time)嵌入式领域。该领域相对而言没有那么严重的软件依赖性，因此没有形成绝对的垄断，但是由于ARM处理器IP商业推广的成功，目前仍然以ARM的处理器架构占大多数市场份额，其他处理器架构譬如Synopsys
+                        ARC等也有不错的市场成绩。<br>
+                        &emsp;&emsp;最后是深嵌入式领域。该领域更像前面所指的传统嵌入式领域。该领域的需求量非常之大，但往往注重低功耗、低成本和高能效比，无须加载像Linux这样的大型应用操作系统，软件大多是需要定制的裸机程序或者简单的实时操作系统，因此对软件生态的依赖性相对比较低。<br>
+                    </p>
+                    <h4>大型机CPU</h4>
+                    <p>
+                        &emsp;&emsp;大型机，或者称大型主机。大型机使用专用的处理器指令集、操作系统和应用软件。大型机一词，最初是指装在非常大的带框铁盒子里的大型计算机系统，以用来同小一些的小型机和微型机有所区别。<br>
+                        &emsp;&emsp;减少大型机CPU消耗是个重要工作。节约每个CPU周期，不仅可以延缓硬件升级，还可以降低基于使用规模的软件授权费。<br>
+                        &emsp;&emsp;大型机体系结构主要包括以下两点：高度虚拟化，系统资源全部共享。大型机可以整合大量的负载于一体，并实现资源利用率的最大化；异步I/O操作。即当执行I/O操作时CPU将I/O指令交给I/O子系统来完成，CPU自己被释放执行其它指令。因此主机在执行繁重的I/O任务的同时，还可以同时执行其它工作。<br>
+                    </p>
+                    <a name="chapter6" class="target-fix"></a>
+                    <h1>与GPU比较</h1>
+                    <h4>GPU</h4>
+                    <p>
+                        &emsp;&emsp;GPU即图像处理器，CPU和GPU的工作流程和物理结构大致是类似的，相比于CPU而言，GPU的工作更为单一。在大多数的个人计算机中，GPU仅仅是用来绘制图像的。如果CPU想画一个二维图形，只需要发个指令给GPU，GPU就可以迅速计算出该图形的所有像素，并且在显示器上指定位置画出相应的图形。由于GPU会产生大量的热量，所以通常显卡上都会有独立的散热装置。
+                    </p>
+                    <h4>设计结构</h4>
+                    <p>
+                        &emsp;&emsp;CPU有强大的算术运算单 元，可以在很少的时钟周期内完成算术计算。同时，有很大的缓存可以保存很多数据在里面。此外，还有复杂的逻辑控制单元，当程序有多个分支的时候，
+                        通过提供分支预测的能力来降低延时。GPU是基于大的吞吐量设计，有很多的算术运算单元和很少的缓存。同时GPU支持大量的线程同时运行，如果他们需要访问同一个数据，缓存会合并这些访问，自然会带来延时的问题。尽管有延时，但是因为其算术运算单元的数量庞大，因此能够达到一个非常大的吞吐量的效果。
+                    </p>
+                    <h4>使用场景</h4>
+                    <p>
+                        &emsp;&emsp;显然，因为CPU有大量的缓存和复杂的逻辑控制单元，因此它非常擅长逻辑控制、串行的运算。相比较而言，GPU因为有大量的算术运算单元，因此可以同时执行大量的计算工作，它所擅长的是大规模的并发计算，
+                        计算量大但是没有什么技术含量，而且要重复很多次。这样一说，我们利用GPU来提高程序运算速度的方法就显而易见了。使用CPU来做复杂的逻辑控制，用GPU来做简单但是量大的算术运算，就能够大大地提高程序的运行速度。
+                    </p>
+                </div>
+
+                <div class="main-bar mainVideo pageOff">
+                    <iframe src="//player.bilibili.com/player.html?aid=463010182&bvid=BV1nL411x7jH&cid=454378887&page=1"
+                        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"
+                        style="width: 70%; height: 500px; max-width: 100%; align:center;"> </iframe>
+                    <p class="videoInfo"> 以下目录可以跳转至对应的视频进行观看，作者：硬件茶谈 for bilibili.com</p><br>
+                    <a class="videoInfo" href="https://www.bilibili.com/video/BV1nL411x7jH"
+                        target="_blank">【硬件科普】带你认识CPU第00期——什么是MOSFET</a><br>
+                    <a class="videoInfo" href="https://www.bilibili.com/video/BV18M4y137Cr"
+                        target="_blank">【硬件科普】带你认识CPU第01期——什么是逻辑门</a><br>
+                    <a class="videoInfo" href="https://www.bilibili.com/video/BV1aQ4y1v7QP"
+                        target="_blank">【硬件科普】带你认识CPU第02期——CPU是怎么计算加法的(上)</a><br>
+                    <a class="videoInfo" href="https://www.bilibili.com/video/BV1aL41177Si"
+                        target="_blank">【硬件科普】带你认识CPU第03期——CPU是怎么计算加法的(下)</a><br>
+                    <a class="videoInfo" href="https://www.bilibili.com/video/BV1fr4y1S7gG"
+                        target="_blank">【硬件科普】带你认识CPU第04期——CPU是怎么计算减法的</a><br>
+                    <a class="videoInfo" href="https://www.bilibili.com/video/BV1AB4y1p7ax"
+                        target="_blank">【硬件科普】带你认识CPU第05期——CPU是怎么计算乘法的</a><br><br>
+                    <a class="videoInfo" href="https://space.bilibili.com/14871346">[点击此处访问作者空间]</a>
+                </div>
+
+                <div class="main-bar mainQA pageOff">
+                    <p>Q：网站的技术栈？</p>
+                    <p>A：HTML + CSS + Javascript，其实JS学的不精，本质上来说这个网站还是个静态网站，没什么实质内容...</p><br>
+                    <p>Q：为什么做这个网站？</p>
+                    <p>A：首页有说，是"为Adalab挑战赛制作的网站"。</p><br>
+                    <p>Q：还有什么想说的吗？</p>
+                    <p>A：其实这个网站并没有网页切换，都是在一个网页加载了，点击按钮只是替换主内容区。</p><br>
+                    <p>Tips：该页面下挂载了Waline的评论系统，可以试试留言(?)</p>
+                    <div class="commentary">
+                        <div id="waline"></div>
+                        <script>
+                            Waline.init({
+                                el: '#waline',
+                                serverURL: 'https://waline-femyk6wl0-pepperjelly.vercel.app',
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-right">
+                <div class="userInfo">
+                    <div class="userImg">
+                        <img src="./imgs/wallhaven-2.png">
+                    </div>
+
+                    <div class="userName">
+                        <p>PepperJelly</p>
+                    </div>
+
+                    <a href="https://www.zhihu.com/people/la-jiao-guo-dong-12" target="_blank">[我的知乎]</a>
+
+                    <div class="userDoc">
+                        <p>当你看到这条消息的时候，意味着我知道你在看这条消息。</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            by
+            <a href="https://www.zhihu.com/people/la-jiao-guo-dong-12" target="_blank">PepperJelly</a>
+            for <a href="https://www.adalab.cn" target="_blank">Adalab</a>
+        </footer>
+    </div>
+
+    <a class="backtop" href="#top">
+        <div>回到<br>顶部</div>
+    </a>
 </body>
 
 </html>

@@ -1,21 +1,276 @@
-a:hover {
-    color: green;
+body {
+    height: 100vh;
+    background-color: bisque;
 }
 
-body {
+.target-fix {
+    position: relative;
+    top: -100px;
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.main-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    width: 100vw;
+    height: 100px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: aliceblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 30%);
+}
+
+header .header-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 200px;
+    height: 100px;
+}
+
+header .header-logo img {
+    height: 70%;
+}
+
+header .header-wrapper {
+    display: flex;
+}
+
+header .header-wrapper a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    padding: 0 30px;
+    height: 60px;
+
+    text-align: center;
+
+    font-size: large;
+    font-family: monospace;
+    color: black;
+}
+
+header .header-wrapper a::after {
+    content: "";
+    width: 80%;
+    height: 5px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 8px;
+    transition: all 500ms;
+}
+
+header .header-wrapper a:hover::after {
+    background-color: darkgoldenrod;
+}
+
+.active::after {
+    background-color: burlywood;
+}
+
+.leftIndex {
+    position: fixed;
+    z-index: 1;
+    top: 100px;
+
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+
+    box-sizing: border-box;
+    height: 100vh;
+    width: 240px;
+    padding: 10px 0 200px 0;
+    border-right: 1px solid lightgray;
+
+    font-family: monospace;
+    background-color: aliceblue;
+}
+
+.leftIndex .leftText {
+    padding: 10px 0 10px 50px;
+    font-weight: bold;
+    font-size: large;
+}
+
+.leftIndex .leftText-chapter {
+    padding: 10px 0 10px 50px;
+    margin-left: 30px;
+    font-weight: lighter;
+    font-size: 12px;
+}
+
+.leftIndex .leftText:hover {
+    background-color: burlywood;
+    transition: all 500ms;
+}
+
+.leftIndex .leftText-chapter:hover {
+    background-color: burlywood;
+    transition: all 500ms;
+}
+
+.leftActive {
+    background-color: bisque;
 }
 
 main {
+    padding: 100px 0 40px 240px;
+
+    box-sizing: border-box;
+
     display: flex;
-    flex: auto;
 }
 
-aside {
+main .main-left {
+    padding: 50px 50px;
+
+    font-family: monospace;
+    font-size: 16px;
+
     flex: 1;
 }
 
-article {
-    flex: 3;
+main .main-left p,
+main .main-left h1,
+main .main-left h4 {
+    padding: 8px 0;
+}
+
+main .main-left p,
+main .main-left h4 {
+    padding-left: 20px;
+}
+
+main .main-left a:hover {
+    color: darkred;
+    text-decoration: underline;
+}
+
+main .mainQA .commentary {
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding: 20px 20px 0 20px;
+    border: 1px solid lightgray;
+    border-radius: 20px;
+
+    background-color: white;
+}
+
+.pageOff {
+    display: none;
+}
+
+main .main-right {
+    box-sizing: border-box;
+    padding: 40px 40px 0 0;
+    width: 300px;
+}
+
+main .main-right .userInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+    box-sizing: border-box;
+    padding: 10px;
+    height: 400px;
+    width: 260px;
+
+    background-color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 30%);
+}
+
+main .main-right .userInfo .userImg {
+    width: 100px;
+    height: 100px;
+}
+
+main .main-right .userInfo .userImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.userInfo .userName,
+.userInfo .userDoc,
+.userInfo a {
+    font-family: monospace;
+    font-weight: bold;
+    color: gray
+}
+
+main .main-right .userInfo .userName {
+    font-size: 24px;
+    color: darkred;
+}
+
+main .main-right .userInfo .userDoc {
+    font-size: 16px;
+}
+
+main .main-right .userInfo a {
+    font-size: 16px;
+}
+
+main .main-right .userInfo a:hover {
+    background-color: burlywood;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100vw;
+    border-top: 1px solid lightgray;
+    background-color: aliceblue;
+
+    line-height: 40px;
+    text-align: center;
+}
+
+footer a {
+    color: burlywood;
+}
+
+.backtop {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+
+    font-size: large;
+    font-family: monospace;
+    font-size: 16px;
+
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 30%);
+    background-color: lightblue;
+
+    width: 50px;
+    height: 50px;
+
+    right: 20px;
+    bottom: 60px;
 }
